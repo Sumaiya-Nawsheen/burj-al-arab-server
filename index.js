@@ -1,6 +1,7 @@
 const express = require('express')
 const cors = require('cors');
 const admin = require('firebase-admin');
+require('dotenv').config()
 
 const app = express()
 app.use(cors());
@@ -71,6 +72,6 @@ client.connect(err => {
 
 
 
-app.listen(5000, () => {
+app.listen(process.env.PORT || 5000, () => {
   console.log(`Example app listening at http://localhost:${5000}`)
 })
