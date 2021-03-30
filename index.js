@@ -7,7 +7,9 @@ const app = express()
 app.use(cors());
 app.use(express.json());
 
-
+app.get('/', (req, res)=> {
+  res.send("Hello from db, it's  working")
+})
 
 var serviceAccount = require('./burj-al-arab-fb-firebase-adminsdk-fhfg7-c5f2132465.json');
 
